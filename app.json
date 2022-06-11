@@ -1,0 +1,16 @@
+{
+  "name": "Mapillary Proxy",
+  "description": "Bounce to the thumbnail of your choice.",
+  "repository": "https://github.com/streetwise/mapillary-proxy",
+  "keywords": [],
+  "env": {
+    "MAPILLARY_APP_TOKEN": {
+      "description": "Mapillary client app token"
+    },
+   },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
