@@ -22,7 +22,6 @@ cache = Cache(
     })
 
 
-@cache.cached(timeout=600)
 class ThumbResource:
 
     def on_get(self, req, resp):
@@ -39,7 +38,6 @@ class ThumbResource:
             )
         url = "https://graph.mapillary.com/" + \
             "%s?access_token=%s&fields=thumb_256_url" % (imgkey, APP_TOKEN)
-        print("Fetching image thumbnail")
         r = requests.get(url)
         if r.json().get('thumb_256_url'):
             imgurl = r.json().get('thumb_256_url')
